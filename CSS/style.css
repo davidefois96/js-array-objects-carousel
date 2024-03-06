@@ -8,12 +8,9 @@ body{height:100vh}
 
 .slider{
   width:70%;
-  height:65%;
+  height:80%;
   
 }
-
-
-.imgWrapper{height: 100%;}
 
 .imgWrapper img{
   width: 100%;
@@ -33,7 +30,7 @@ body{height:100vh}
   text-align: center;
   line-height: 30px;
   color: white;
-  transform: translateX(-50%);
+  transform: translatey(-50%);
   cursor: pointer;
 }
 
@@ -45,15 +42,21 @@ body{height:100vh}
   background-color: white;
 }
 
-.btnArrow.up{
-  top:2%;
-  left:50%;
+.btnArrow.left{
+  top:50%;
+  left:2%;
   
 
 }
-.btnArrow.down{
-  bottom: 2%;
-  left:50%;
+.btnArrow.right{
+  right: 2%;
+  top:50%;
  
 }
 
+.thumbimages:hover {
+  opacity: 85%;
+  cursor: pointer;
+
+
+}
