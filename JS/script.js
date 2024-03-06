@@ -75,8 +75,8 @@ const images = [
 
 images.forEach (elemento => {
   
-  imgCollection.push(`
-  <div class="w-100 h-100 d-none"= >
+  imgWrapper.innerHTML+=`
+  <div class="w-100 h-100 position-relative d-none"= >
   <div class="position-absolute m-3 ">
   <h1>
     ${elemento.nome}
@@ -87,21 +87,17 @@ images.forEach (elemento => {
 
   </div>
    
-  
-
   <img src="${elemento.url} " alt="${elemento.nome} class="w-100 h-100">
   
-  
-  
   </div> `
- );
+ ;
 
 });
 
 console.log(imgCollection);
 
-imgWrapper.innerHTML+=imgCollection[contImg]
-imgCollection[contImg].classList.remove('d-none');
+
+images[contImg].classList.remove('d-none');
 
 
 scrollDown();
