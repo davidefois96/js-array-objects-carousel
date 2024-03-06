@@ -2,7 +2,6 @@ const imgWrapper = document.querySelector('.imgWrapper');
 const slider = document.querySelector('.slider');
 const up= document.querySelector('.up');
 const down= document.querySelector('.down');
-const imgCollection=[];
 let contImg = 0 ;
 
 
@@ -11,7 +10,7 @@ const scrollDown = () =>{
   interScroll = setInterval(() => {
 
 
-    imgCollection[contImg].classList.add('d-none');
+    myImgs[contImg].classList.add('d-none');
   
     
     if(contImg===images.length-1){
@@ -24,7 +23,7 @@ const scrollDown = () =>{
   
     }
 
-    imgCollection[contImg].classList.remove('d-none');
+    myImgs[contImg].classList.remove('d-none');
 
 
     
@@ -94,15 +93,13 @@ images.forEach (elemento => {
 
 });
 
-console.log(imgCollection);
 
 
+const myImgs = document.querySelectorAll('.myImgs');
 
-
+myImgs[contImg].classList.remove('d-none');
 
 scrollDown();
-
-
 
 imgWrapper.addEventListener('mouseover',function(){
 
@@ -131,7 +128,7 @@ imgWrapper.addEventListener('mouseout',function(){
 
 up.addEventListener('click', function() {
 
-  imgCollection[contImg].classList.add('d-none');
+  myImgs[contImg].classList.add('d-none');
 
 
   if(contImg===0){
@@ -146,13 +143,13 @@ up.addEventListener('click', function() {
 
   }
 
-  imgCollection[contImg].classList.remove('d-none');
+  myImgs[contImg].classList.remove('d-none');
  
 
 })
 down.addEventListener('click', function() {
 
-  imgCollection[contImg].classList.add('d-none');
+  myImgs[contImg].classList.add('d-none');
 
   
   if(contImg===images.length-1){
@@ -164,7 +161,7 @@ down.addEventListener('click', function() {
     contImg++;
 
   }
-  imgCollection[contImg].classList.remove('d-none');
+  myImgs[contImg].classList.remove('d-none');
 
 
 })
