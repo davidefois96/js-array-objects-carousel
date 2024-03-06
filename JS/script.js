@@ -2,6 +2,8 @@ const imgWrapper = document.querySelector('.imgWrapper');
 const slider = document.querySelector('.slider');
 const up= document.querySelector('.up');
 const down= document.querySelector('.down');
+const imgCollection=[];
+let contImg = 0 ;
 
 
 const scrollDown = () =>{
@@ -30,29 +32,79 @@ const scrollDown = () =>{
 
 
 }
-let contImg= 0;
+
 
 const images = [
-  '../assets/img/01.webp',
-  '../assets/img/02.webp',
-  '../assets/img/03.webp',
-  '../assets/img/04.webp',
-  '../assets/img/05.webp',
+  
+  { 
+  url :'http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg' ,
+  nome : 'Svezia',
+  descrizione :'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam.'
+
+  }, 
+  { 
+  url :'http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg' ,
+  nome : 'Svezia',
+  descrizione :'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam.'
+
+  }, 
+  { 
+  url :'http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg' ,
+  nome : 'Svezia',
+  descrizione :'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam.'
+
+  }, 
+  { 
+  url :'http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg' ,
+  nome : 'Svezia',
+  descrizione :'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam.'
+
+  }, 
+  { 
+  url :'http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg' ,
+  nome : 'Svezia',
+  descrizione :'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam.'
+
+  }, 
+  
+  
 ]
 
 
-for (let i = 0; i < images.length; i++) {
   
-  imgWrapper.innerHTML += ` <img class="d-none img" src=" ${images[i]}"> `;
 
-}
+images.forEach (elemento => {
+  
+  imgCollection.push(`
+  <div class="w-100 h-100 "= >
+  <div>
+  <h1>
+    ${elemento.nome}
+   </h1>
+   <p>
+    ${elemento.descrizione}
+   </p>
 
-const imgCollection= document.getElementsByClassName('img');
+  </div>
+   
+  <div>
 
+  <img src="${elemento.url} " alt="${elemento.nome} ">
+  
+  </div>
+  
+  </div> `
+ );
+
+});
+
+console.log(imgCollection);
+
+imgWrapper.innerHTML+=imgCollection[contImg]
 imgCollection[contImg].classList.remove('d-none');
 
 
-scrollDown();
+// scrollDown();
 
 
 
