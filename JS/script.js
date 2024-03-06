@@ -44,25 +44,25 @@ const images = [
   }, 
   { 
   url :'http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg' ,
-  nome : 'Svezia',
+  nome : 'Finlandia',
   descrizione :'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam.'
 
   }, 
   { 
   url :'http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg' ,
-  nome : 'Svezia',
+  nome : 'Norvegia',
   descrizione :'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam.'
 
   }, 
   { 
   url :'http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg' ,
-  nome : 'Svezia',
+  nome : 'Danimarca',
   descrizione :'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam.'
 
   }, 
   { 
   url :'http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg' ,
-  nome : 'Svezia',
+  nome : 'Islanda',
   descrizione :'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam.'
 
   }, 
@@ -76,8 +76,8 @@ const images = [
 images.forEach (elemento => {
   
   imgCollection.push(`
-  <div class="w-100 h-100 "= >
-  <div>
+  <div class="w-100 h-100 d-none"= >
+  <div class="position-absolute m-3 ">
   <h1>
     ${elemento.nome}
    </h1>
@@ -87,11 +87,11 @@ images.forEach (elemento => {
 
   </div>
    
-  <div>
-
-  <img src="${elemento.url} " alt="${elemento.nome} ">
   
-  </div>
+
+  <img src="${elemento.url} " alt="${elemento.nome} class="w-100 h-100">
+  
+  
   
   </div> `
  );
@@ -104,7 +104,7 @@ imgWrapper.innerHTML+=imgCollection[contImg]
 imgCollection[contImg].classList.remove('d-none');
 
 
-// scrollDown();
+scrollDown();
 
 
 
